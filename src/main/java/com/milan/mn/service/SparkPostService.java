@@ -25,11 +25,11 @@ public class SparkPostService implements EmailService{
 			        email.to,
 			        email.subject,
 			        email.body, "");
-			System.out.println(sparky);
+			return "Success";
 		} catch (SparkPostException e) {
 			e.printStackTrace();
+			return "Failure";
 		}
-		return null;
 	}
 
 }
